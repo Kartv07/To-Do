@@ -42,4 +42,3 @@ const AddFeedback = () =>{
     )
 }
 
-export default AddFeedback;

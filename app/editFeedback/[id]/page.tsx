@@ -44,5 +44,3 @@ const EditFeedback = (params:any) =>{
         </div>
     )
 }
-
-export default EditFeedback;
