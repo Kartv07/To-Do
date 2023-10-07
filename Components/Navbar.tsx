@@ -7,25 +7,12 @@ import { AiOutlineMenu } from "react-icons/ai"
 import { useRouter } from 'next/navigation'
 import Link from "next/link";
 import { AppContext } from "@/app/layout";
+import { useMediaQuery } from '@mui/material';
 export default function Navbar() {
     const {log, setLog} = useContext(AppContext) || {log : true, setLog : () => undefined};
     const [toggle, setToggle] = useState<boolean>(false);
     const router = useRouter();
-    const [isDesktop, setIsDesktop] = useState<boolean>(false);
-
-    useEffect(() => {
-        const handleResize = () => {
-            setIsDesktop(window.innerWidth > 750);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+  const isDesktop = useMediaQuery('(max-width: 767px)');
 
     useEffect(() => {
         // Initialize the gapi object
@@ -65,7 +52,7 @@ export default function Navbar() {
                     <h3>Twiss</h3>
                     <p>Todo App</p>
                 </div>
-                {isDesktop ? (<>
+                {!isDesktop ? (<>
               
                     <div className="flex gap-8 py-2 items-center ">
                         <Link href="/feeds" className="hover:bg-teal-300 rounded-lg px-2 py-1">Feeds</Link>

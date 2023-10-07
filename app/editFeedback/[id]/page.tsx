@@ -39,7 +39,7 @@ const EditFeedback = (params:any) =>{
                 <Toaster position="top-center" reverseOrder={false} />
                 <input onChange={(e:any)=>{setTit(e.target.value)}} className="border-2 border-neutral-400 bg-transparent rounded-md px-4 py-2 mx-auto md:w-[700px]" placeholder="Title" value={tit}/>
                 <input onChange={(e:any)=>setDescrip(e.target.value)} className="border-2 border-neutral-400 bg-transparent rounded-md px-4 py-2 my-2 md:w-[700px]" placeholder="Description" value={descrip} />
-                <button onClick={handleUpdate} className="bg-teal-400 rounded-lg px-4 py-2 hover:bg-teal-300" >Add</button>
+                <button onClick={handleUpdate} className="bg-teal-400 rounded-lg px-4 py-2 hover:bg-teal-300" >Update</button>
             </div>
         </div>
     )
