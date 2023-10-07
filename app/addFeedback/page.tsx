@@ -7,7 +7,7 @@ import {toast, Toaster} from "react-hot-toast"
 import { useRouter } from "next/navigation";
 import { AppContext } from "@/app/layout";
 
-const addFeedback = () =>{
+const AddFeedback = () =>{
     const {user, setUser} = useContext(AppContext) || {user : true, setUser : () => undefined};
 
     const [tit, setTit] = useState();
@@ -42,4 +42,4 @@ const addFeedback = () =>{
     )
 }
 
-export default addFeedback;
+export default AddFeedback;
