@@ -6,7 +6,7 @@ import {toast, Toaster} from "react-hot-toast"
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
-const AddFeedback = (params:any) =>{
+const EditFeedback = (params:any) =>{
     const id_val = params.params.id;
     const [tit, setTit] =useState<string>();
     const [descrip, setDescrip] = useState<string>();
@@ -45,4 +45,4 @@ const AddFeedback = (params:any) =>{
     )
 }
 
-export default AddFeedback;
+export default EditFeedback;

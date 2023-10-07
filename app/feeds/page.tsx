@@ -8,7 +8,7 @@ import { useEffect, useState, useContext } from 'react'
 import { AppContext } from "@/app/layout";
 
 
-export default function feeds() {
+export default function Feeds() {
 
   const router = useRouter();
   const {user, setUser} = useContext(AppContext) || {user : true, setUser : () => undefined};
